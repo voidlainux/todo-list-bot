@@ -1,0 +1,16 @@
+name = "todo-list-bot"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "todo-db"
+database_id = "457ea913-e945-4cf7-ace9-e54296be65ea"
+
+[triggers]
+crons = ["* * * * *"]
+
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true
